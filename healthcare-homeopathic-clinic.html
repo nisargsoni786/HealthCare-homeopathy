@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Healthcare Homeopathic Clinic · Dr. Nidhi Soni</title>
+<meta name="description" content="Gentle homeopathic care for children, elders and peace of mind. In clinic and online with Dr. Nidhi Soni, BHMS, MD (Homoeopathy).">
+<meta name="theme-color" content="#1E5A3C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Nunito+Sans:wght@400;600;700;800&display=swap">
+<style>
+:root{
+ --bg:#F3F7F2;--ink:#14281D;--muted:#34503F;--card:#FFFFFF;--line:#DCE7D9;--mint:#DCEBD9;--cream:#FCE9C8;--cream-card:#FFFDF8;--cream-ink:#4A4030;
+ --green:#1E5A3C;--green-ink:#FFFFFF;--deep:#14281D;--deep-ink:#F3F7F2;--deep-muted:#C9DBCD;--gold:#E8A23A;--gold-ink:#14281D;--gold-text:#A0640F;--chip-off:#7FB08F;
+ --head:'Bricolage Grotesque',ui-rounded,system-ui,sans-serif;--body:'Nunito Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+ color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+ --bg:#0F1A14;--ink:#EAF2EC;--muted:#B7CBBE;--card:#17271E;--line:#294035;--mint:#1E3328;--cream:#2C2416;--cream-card:#211B10;--cream-ink:#E6D6B8;
+ --green:#3F9A6A;--green-ink:#0B1610;--deep:#0B140F;--deep-ink:#EAF2EC;--deep-muted:#A9C2B2;--gold:#F0B04E;--gold-ink:#14281D;--gold-text:#F2C46D;--chip-off:#4E8F67;color-scheme:dark}}
+:root[data-theme="dark"]{
+ --bg:#0F1A14;--ink:#EAF2EC;--muted:#B7CBBE;--card:#17271E;--line:#294035;--mint:#1E3328;--cream:#2C2416;--cream-card:#211B10;--cream-ink:#E6D6B8;
+ --green:#3F9A6A;--green-ink:#0B1610;--deep:#0B140F;--deep-ink:#EAF2EC;--deep-muted:#A9C2B2;--gold:#F0B04E;--gold-ink:#14281D;--gold-text:#F2C46D;--chip-off:#4E8F67;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none !important}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px));-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{max-width:100%}
+a{color:var(--green)}
+h1,h2,h3{font-family:var(--head);margin:0;line-height:1.08;letter-spacing:-.01em}
+p{margin:0}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.eyebrow{font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:13px;color:var(--gold-text)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 24px;border-radius:999px;font-weight:800;font-size:16px;text-decoration:none;border:2px solid transparent;transition:transform .18s ease,box-shadow .18s ease;-webkit-tap-highlight-color:transparent}
+.btn:active{transform:scale(.98)}
+.btn-gold{background:var(--gold);color:var(--gold-ink)}
+.btn-green{background:var(--green);color:var(--green-ink)}
+.btn-ghost{border-color:var(--green);color:var(--green)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.ico{width:20px;height:20px;flex:0 0 auto}
+
+/* header */
+header{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:31;background:var(--bg)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:68px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.logo b{display:block;font-family:var(--head);font-weight:800;font-size:18px;line-height:1.05}
+.logo small{display:block;font-size:11px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.links{display:none}
+.burger{width:46px;height:46px;border-radius:14px;border:0;background:var(--green);color:var(--green-ink);display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
+.mnav{display:none;border-top:1px solid var(--line);padding:4px 20px 18px}
+.mnav.open{display:block}
+.mnav a{display:block;padding:14px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);font-family:var(--head);font-weight:700;font-size:21px}
+.mnav a:last-child{border-bottom:0}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;padding-top:22px;padding-bottom:26px}
+.hero>*{min-width:0}
+.hero-art{display:flex;justify-content:center;position:relative}
+.hero-art .art{width:min(250px,64vw);height:auto}
+.badge{position:absolute;right:0;bottom:4px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:8px 12px;display:flex;gap:8px;align-items:center;font-size:12px;line-height:1.25;box-shadow:0 8px 20px rgba(0,0,0,.08)}
+.badge b{font-size:13px;display:block}
+.pill{align-self:flex-start;display:inline-flex;gap:8px;align-items:center;padding:7px 13px;border-radius:999px;background:var(--cream);color:var(--gold-text);font-weight:800;font-size:13px}
+.hero-copy{display:flex;flex-direction:column;gap:16px}
+.hero h1{font-size:clamp(2.1rem,9vw,4.6rem);font-weight:800}
+.hero h1 span{color:var(--green)}
+.lead{font-size:1.05rem;color:var(--muted);max-width:560px}
+.ctas{display:grid;gap:10px}
+.ticks{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 -20px;padding:2px 20px 4px}
+.ticks::-webkit-scrollbar{display:none}
+.ticks span{flex:0 0 auto;display:inline-flex;gap:6px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 13px;font-size:13.5px;font-weight:700;white-space:nowrap}
+
+/* quick tiles */
+.quick h2{font-size:20px;margin-bottom:12px}
+.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.tile{min-height:128px;border-radius:22px;padding:15px;display:flex;flex-direction:column;gap:5px;text-decoration:none;transition:transform .15s ease}
+.tile:active{transform:scale(.97)}
+.tile strong{font-family:var(--head);font-weight:800;font-size:18px;line-height:1.15}
+.tile span{font-size:13px;font-weight:700;opacity:.88;line-height:1.35}
+.tile em{font-style:normal;font-size:13px;font-weight:800;margin-top:auto}
+.t1{background:var(--cream);color:var(--ink)}.t2{background:var(--mint);color:var(--ink)}.t3{background:var(--green);color:var(--green-ink)}.t4{background:var(--gold);color:var(--gold-ink)}
+
+/* marquee */
+.band{background:var(--green);color:var(--green-ink);overflow:hidden;margin-top:28px}
+.marq{display:flex;width:max-content;gap:24px;padding:15px 0;font-family:var(--head);font-weight:700;font-size:17px;white-space:nowrap;animation:marq 26s linear infinite}
+.marq i{font-style:normal;color:var(--gold)}
+.marq .dup{display:flex;gap:24px}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* sections */
+section.sec{padding:52px 0 8px}
+.sec-head{display:flex;flex-direction:column;gap:10px;margin-bottom:22px;max-width:720px}
+.sec-head h2{font-size:clamp(1.8rem,6.5vw,3rem);font-weight:800}
+.sec-head p{color:var(--muted);font-size:1.02rem}
+.hint{font-size:13px;font-weight:800;color:var(--gold-text);margin:-10px 0 12px}
+.swipe{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -20px;padding:4px 20px 16px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.swipe::-webkit-scrollbar{display:none}
+.swipe>*{flex:0 0 82%;scroll-snap-align:center}
+.card{background:var(--card);border:1px solid var(--line);border-radius:26px;overflow:hidden;display:flex;flex-direction:column}
+.card .pic{display:block;width:100%;height:auto;aspect-ratio:4/3}
+.card .txt{padding:20px 20px 24px;display:flex;flex-direction:column;gap:8px}
+.card h3{font-size:24px;font-weight:800}
+.card p{color:var(--muted);font-size:15.5px}
+.support{background:var(--cream);border-radius:28px;padding:26px 20px 12px}
+.support h2{font-size:clamp(1.5rem,5.6vw,2.4rem);font-weight:800;margin-bottom:16px}
+.sitem{background:var(--cream-card);border-radius:20px;padding:18px;display:flex;gap:12px;align-items:flex-start;color:var(--cream-ink)}
+.sitem svg{width:30px;height:30px;flex:0 0 auto;color:var(--gold-text)}
+.sitem b{display:block;font-size:16.5px;color:var(--ink)}
+.sitem span{font-size:14.5px;line-height:1.5}
+.support .swipe>*{flex-basis:72%}
+.visit{background:var(--deep);color:var(--deep-ink);margin-top:52px;padding:52px 0 40px}
+.visit .eyebrow{color:#F2C46D}
+.visit .hint{color:#F2C46D}
+.step{border:1px solid #35553F;border-radius:22px;padding:24px 20px;display:flex;flex-direction:column;gap:10px}
+.step .n{font-family:var(--head);font-weight:800;font-size:40px;color:var(--gold);line-height:1}
+.step b{font-size:19px}
+.step span{color:var(--deep-muted);font-size:15.5px}
+.visit .swipe>*{flex-basis:76%}
+.online{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:26px 20px;display:grid;gap:22px}
+.online h2{font-size:clamp(1.8rem,6.5vw,3rem);font-weight:800}
+.online h2 span{color:var(--green)}
+.olist{display:grid;gap:10px}
+.oitem{background:var(--bg);border-radius:18px;padding:16px;display:flex;gap:12px;align-items:flex-start}
+.oitem .n{flex:0 0 auto;width:38px;height:38px;border-radius:50%;background:var(--gold);color:var(--gold-ink);display:flex;align-items:center;justify-content:center;font-weight:800}
+.oitem b{display:block}
+.oitem span{font-size:14.5px;color:var(--muted)}
+.tag{align-self:flex-start;display:inline-flex;gap:8px;align-items:center;padding:7px 13px;border-radius:999px;background:var(--mint);color:var(--green);font-weight:800;font-size:13px}
+.doc{display:grid;gap:22px;align-items:center}
+.photo{width:min(260px,70vw);aspect-ratio:300/340;margin:0 auto;border-radius:140px 140px 28px 28px;background:var(--mint);border:2px dashed var(--chip-off);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--muted);font-weight:800;text-align:center;padding:16px}
+.doc h2{font-size:clamp(2rem,7vw,3rem);font-weight:800}
+.quals{font-weight:800;color:var(--green)}
+.doc p{color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{display:inline-flex;align-items:center;min-height:36px;padding:0 14px;border-radius:999px;font-weight:800;font-size:14px}
+.c1{background:var(--mint);color:var(--green)}.c2{background:var(--cream);color:var(--gold-text)}
+details{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+details+details{margin-top:10px}
+summary{list-style:none;cursor:pointer;min-height:60px;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:14px;font-weight:800;font-size:17px}
+summary::-webkit-details-marker{display:none}
+summary .pm{flex:0 0 auto;width:32px;height:32px;border-radius:50%;background:var(--mint);color:var(--green);display:flex;align-items:center;justify-content:center;font-size:20px;transition:transform .2s}
+details[open] summary .pm{transform:rotate(45deg)}
+details p{padding:0 18px 18px;color:var(--muted)}
+.contact{background:var(--green);color:var(--green-ink);border-radius:28px;padding:28px 20px;display:grid;gap:22px}
+.contact .eyebrow{color:#F2C46D}
+.contact h2{font-size:clamp(1.8rem,6.5vw,3rem);font-weight:800}
+.contact .sub{opacity:.9}
+.topics{display:flex;flex-wrap:wrap;gap:8px}
+.topics button{min-height:44px;padding:0 16px;border-radius:999px;border:2px solid var(--chip-off);background:transparent;color:inherit;font:inherit;font-weight:700;font-size:14.5px;cursor:pointer}
+.topics button[aria-pressed="true"]{background:#F2C46D;border-color:#F2C46D;color:#14281D;font-weight:800}
+.preview{font-size:14px;opacity:.9}
+.info{background:var(--bg);color:var(--ink);border-radius:22px;padding:22px;display:grid;gap:16px}
+.info div{display:flex;gap:12px}
+.info svg{width:24px;height:24px;flex:0 0 auto;color:var(--green)}
+.info b{display:block}
+footer{border-top:1px solid var(--line);margin-top:52px}
+footer .wrap{padding-top:24px;padding-bottom:120px;display:grid;gap:10px;font-size:13.5px;color:var(--muted)}
+footer b{color:var(--ink)}
+.dock{position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:40;display:flex;gap:8px;padding:7px;border-radius:999px;background:rgba(20,40,29,.96);box-shadow:0 12px 30px rgba(0,0,0,.3);transform:translateY(0);transition:transform .25s ease}
+.dock a{min-height:50px;border-radius:999px;display:flex;align-items:center;justify-content:center;gap:8px;font-weight:800;text-decoration:none}
+.dock .w{flex:1 1 auto;background:var(--gold);color:var(--gold-ink);font-size:16px}
+.dock .o{flex:0 0 auto;padding:0 16px;border:2px solid #4E8F67;color:#FFFFFF;font-size:15px}
+.mob{display:block}
+.desk{display:none}
+
+/* tablet / laptop */
+@media (min-width: 861px){
+ .wrap{padding:0 28px}
+ .links{display:flex;align-items:center;gap:26px;font-weight:700;font-size:15px}
+ .links a{text-decoration:none;padding:10px 0}
+ .links a.btn{padding:0 18px;min-height:46px;font-size:15px;color:var(--green-ink)}
+ .burger,.mnav,.mnav.open,.dock,.mob,.hint{display:none !important}
+ .desk{display:block}
+ .btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(20,40,29,.18)}
+ .hero{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);align-items:center;gap:48px;padding-top:64px;padding-bottom:48px}
+ .hero-art{order:2}
+ .hero-art .art{width:100%;max-width:500px}
+ .badge{left:6%;right:auto;bottom:10%;padding:14px 18px;font-size:13px;border-radius:20px}
+ .badge b{font-size:15px}
+ .lead{font-size:1.2rem}
+ .ctas{display:flex;flex-wrap:wrap;gap:14px}
+ .btn{min-height:56px;padding:0 28px;font-size:17px}
+ .ticks{flex-wrap:wrap;overflow:visible;margin:0;padding:6px 0 0;gap:10px 22px}
+ .ticks span{background:none;border:0;padding:0;font-size:15px}
+ .band{margin-top:0}
+ .marq{width:auto;justify-content:center;flex-wrap:wrap;animation:none;font-size:20px;padding:18px 28px;gap:10px 26px}
+ .marq .dup{display:none}
+ section.sec{padding:80px 0 10px}
+ .swipe{display:grid;overflow:visible;margin:0;padding:0;gap:22px}
+ .swipe>*{flex:none}
+ .g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+ .support .swipe{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+ .support{padding:40px 36px}
+ .card{transition:transform .25s ease,box-shadow .25s ease}
+ .card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(20,40,29,.12)}
+ .visit{margin-top:80px;padding:80px 0}
+ .online{grid-template-columns:1.1fr .9fr;padding:48px 44px;gap:40px;align-items:center}
+ .doc{grid-template-columns:.8fr 1.2fr;gap:48px}
+ .photo{width:300px}
+ .contact{grid-template-columns:1.2fr .8fr;padding:48px 40px;gap:40px;align-items:start}
+ footer .wrap{grid-template-columns:1fr 1fr;padding-bottom:40px}
+}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.marq{animation:none;flex-wrap:wrap;width:auto;padding:15px 20px}.marq .dup{display:none}.btn,.card,.tile,.dock{transition:none}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap bar">
+  <a class="logo" href="#top" aria-label="Healthcare Homeopathic Clinic, home">
+   <svg width="42" height="42" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="22" fill="#1E5A3C"/><path d="M22 9C13 15 12 27 22 35C32 27 31 15 22 9Z" fill="#9FD1A8"/><path d="M22 13L22 33" stroke="#1E5A3C" stroke-width="2"/><circle cx="33" cy="32" r="5" fill="#E8A23A"/></svg>
+   <span><b>Healthcare</b><small>Homeopathic Clinic</small></span>
+  </a>
+  <nav class="links" aria-label="Main">
+   <a href="#care">Who we help</a><a href="#visit">Your visit</a><a href="#online">Online consult</a><a href="#doctor">Our doctor</a><a href="#faq">Questions</a>
+   <a class="btn btn-green js-wa" href="#contact" target="_blank" rel="noopener">Book on WhatsApp</a>
+  </nav>
+  <button class="burger" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Open menu">
+   <svg class="i-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+   <svg class="i-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true" hidden><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+ </div>
+ <nav class="mnav" id="mnav" aria-label="Mobile">
+  <a href="#care">Who we help</a><a href="#online">Online consultation</a><a href="#doctor">Our doctor</a><a href="#visit">Your visit</a><a href="#faq">Questions</a><a href="#contact">Contact</a>
+ </nav>
+</header>
+
+<main id="top">
+ <div class="wrap hero">
+  <div class="hero-art">
+   <svg xmlns="http://www.w3.org/2000/svg" class="art" role="img" aria-label="A bottle of homeopathic sugar pills among green leaves and marigold flowers" viewBox="0 0 600 600" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpkYTc5YmJjZS1lZjdmLTQ0ZjYtODQzZi01OWYxZDcyNGNlNzAAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaKSAsfSj+edlfMd+oJTS8XYAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDozODU0YjliZS1lOTI0LTRmMTItOThhNy1lMDExOTc3ZDM0NTZscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNo6+ZLiFQWzoOVMc7xr8WAhwAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggxv+16rwyLXwyFzikx3u4trPjxuD3GEr1hRcsnAY1SyakZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaBmtOY0Mp0S2wawuVQ3+dwEAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCCzlh1nGt88SrkiBMEgBMY4l0cg9JWZIA7TmUp8UTmDTGRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBiWZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmRhNzliYmNlLWVmN2YtNDRmNi04NDNmLTU5ZjFkNzI0Y2U3MC9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjQ2ZWNlMTQ3LTQ3MjgtNDQxYS1hNzUzLWYxYmVjMzYyMGRlYXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCDG/7XqvDItfDIXOKTHe7i2s+PG4PcYSvWFFyycBjVLJqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggNzWU9zLqKfs8668qhDiXLndcGR5UoFAiRhTww+YCXcWiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggSWmc+qQZOfChtdkgu6SbIWwUggOZBwQCnhOOCUSnJwF0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQPgZDGOd6cDeTBtzF/bVGIvvSrESoxO/qGBUTmQ80tmFXP5P2/Lvh2jxHuqK/eJ1Tse20aVnEHjMvb6Np+bH7qw=</c2pa:manifest></metadata>
+<circle cx="300" cy="300" r="270" fill="#DCEBD9"/>
+<circle cx="300" cy="300" r="210" fill="#C7DEC2"/>
+<g fill="#2F6B4A">
+<path d="M120 470 C 90 360, 140 250, 230 200 C 210 300, 190 390, 120 470 Z"/>
+<path d="M480 470 C 510 360, 460 250, 370 200 C 390 300, 410 390, 480 470 Z"/>
+</g>
+<g fill="#4E8F67">
+<path d="M150 520 C 140 420, 190 330, 260 300 C 240 390, 210 460, 150 520 Z"/>
+<path d="M450 520 C 460 420, 410 330, 340 300 C 360 390, 390 460, 450 520 Z"/>
+</g>
+<path d="M120 470 Q 175 330 230 200" stroke="#DCEBD9" stroke-width="3" fill="none"/>
+<path d="M480 470 Q 425 330 370 200" stroke="#DCEBD9" stroke-width="3" fill="none"/>
+
+<rect x="245" y="170" width="110" height="34" rx="8" fill="#1E3A2B"/>
+<rect x="258" y="150" width="84" height="26" rx="6" fill="#E8A23A"/>
+<path d="M232 210 h136 a14 14 0 0 1 14 14 v230 a40 40 0 0 1 -40 40 h-84 a40 40 0 0 1 -40 -40 v-230 a14 14 0 0 1 14 -14 z" fill="#FFFFFF" stroke="#1E3A2B" stroke-width="6"/>
+<rect x="246" y="300" width="108" height="96" rx="10" fill="#F7E3BC"/>
+<path d="M300 318 C 280 330, 276 356, 300 378 C 324 356, 320 330, 300 318 Z" fill="#2F6B4A"/>
+<path d="M300 326 L300 374" stroke="#F7E3BC" stroke-width="3"/>
+<g fill="#FFFFFF" stroke="#1E3A2B" stroke-width="3">
+<circle cx="268" cy="438" r="11"/><circle cx="294" cy="446" r="11"/><circle cx="320" cy="436" r="11"/><circle cx="282" cy="462" r="11"/><circle cx="310" cy="464" r="11"/><circle cx="336" cy="458" r="11"/>
+</g>
+
+<g fill="#FFFFFF" stroke="#1E3A2B" stroke-width="3">
+<circle cx="430" cy="540" r="12"/><circle cx="458" cy="552" r="9"/><circle cx="160" cy="548" r="10"/>
+</g>
+
+<g>
+<circle cx="150" cy="200" r="18" fill="#E8A23A"/><circle cx="150" cy="200" r="7" fill="#1E3A2B"/>
+<circle cx="470" cy="160" r="14" fill="#F2C46D"/><circle cx="470" cy="160" r="5" fill="#1E3A2B"/>
+<circle cx="505" cy="250" r="10" fill="#E8A23A"/>
+</g>
+<path d="M150 218 C 150 260, 170 300, 190 330" stroke="#2F6B4A" stroke-width="4" fill="none"/>
+<path d="M470 174 C 470 220, 450 260, 420 300" stroke="#2F6B4A" stroke-width="4" fill="none"/>
+</svg>
+   <div class="badge"><svg width="30" height="30" viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="18" fill="#DCEBD9"/><path d="M11 19c2 3 4 4 7 4s5-1 7-4" stroke="#1E5A3C" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="13" cy="14" r="2" fill="#1E5A3C"/><circle cx="23" cy="14" r="2" fill="#1E5A3C"/></svg><span><b>No bitter taste</b>Kids ask for their “meetha dawai”</span></div>
+  </div>
+  <div class="hero-copy">
+   <span class="pill"><svg width="12" height="12" viewBox="0 0 14 14" aria-hidden="true"><circle cx="7" cy="7" r="6" fill="#E8A23A"/></svg>Gentle care for every age</span>
+   <h1>From little ones to <span>grand ones</span>, healing that feels kind.</h1>
+   <p class="lead">At Healthcare Homeopathic Clinic, Dr. Nidhi Soni listens to the whole person — body, mind and daily life — and chooses a remedy made just for you. In clinic and online.</p>
+   <div class="ctas">
+    <a class="btn btn-gold js-wa" href="#contact" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.7-5A8.5 8.5 0 1 1 8 19.5L3 21z"/></svg>Chat with us on WhatsApp</a>
+    <a class="btn btn-ghost" href="#care">See how we help</a>
+   </div>
+   <div class="ticks">
+    <span>✓ Sweet, child-friendly pills</span><span>✓ Remedy chosen for you</span><span>✓ Time to listen</span><span>✓ Online consultations</span>
+   </div>
+  </div>
+ </div>
+
+ <div class="wrap quick mob" aria-label="Quick start">
+  <h2>What brings you here?</h2>
+  <div class="tiles">
+   <a class="tile t1" data-topic="child" target="_blank" rel="noopener" href="#contact"><strong>My child</strong><span>Colds, teething, tummy, sleep</span><em>Ask on WhatsApp →</em></a>
+   <a class="tile t2" data-topic="elder" target="_blank" rel="noopener" href="#contact"><strong>Elderly parent</strong><span>Joints, sleep, long-standing</span><em>Ask on WhatsApp →</em></a>
+   <a class="tile t3" data-topic="mind" target="_blank" rel="noopener" href="#contact"><strong>Stress &amp; sleep</strong><span>Worry, exams, restless nights</span><em>Ask on WhatsApp →</em></a>
+   <a class="tile t4" data-topic="online" target="_blank" rel="noopener" href="#contact"><strong>Online consult</strong><span>Video or phone, from home</span><em>Ask on WhatsApp →</em></a>
+  </div>
+ </div>
+
+ <div class="band" aria-label="Areas of care">
+  <div class="marq">
+   <span>Children</span><i>✦</i><span>Elders</span><i>✦</i><span>Peace of mind</span><i>✦</i><span>Skin</span><i>✦</i><span>Allergies</span><i>✦</i><span>Women’s health</span><i>✦</i><span>Online consultations</span>
+   <span class="dup" aria-hidden="true"><i>✦</i><span>Children</span><i>✦</i><span>Elders</span><i>✦</i><span>Peace of mind</span><i>✦</i><span>Skin</span><i>✦</i><span>Allergies</span><i>✦</i><span>Women’s health</span><i>✦</i><span>Online consultations</span><i>✦</i></span>
+  </div>
+ </div>
+
+ <section class="sec" id="care"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Who we help</span><h2>Care that fits every stage of life</h2><p>Homeopathy looks at the person, not just the complaint — a natural fit for the people who need the gentlest touch.</p></div>
+  <p class="hint">Swipe to see more →</p>
+  <div class="swipe g3">
+   <article class="card"><svg xmlns="http://www.w3.org/2000/svg" class="pic" role="img" aria-label="A smiling child holding a green balloon" viewBox="0 0 400 300" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTowYWE1N2RiNC00MDJlLTQyMDUtYmU0ZS1mNzNkNTBlNGRmYjAAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaLXW+X9jzaSMG/2MD1CULYoAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDpjY2MzYjM3ZC01NWU4LTQ1YzMtOTQ5My1lZjhlNzE0N2Y5ZThscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNo/lfFPrxl9PCnEStLq8RRfAAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggZ6Gg4upbO7NjHBknVFcT12uoPJRbtzo1m7AaD051iv2kZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaGKztIq3qIOQqV6+R0H5OF0AAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCD7DlSVTcghJGv02bjjVjbmJfaCTi/CKpPsVp0YB0EtXmRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBiWZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjBhYTU3ZGI0LTQwMmUtNDIwNS1iZTRlLWY3M2Q1MGU0ZGZiMC9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjk2M2IwNzU0LTFhNmEtNDkxNS04ZjM5LTBiNjUxMDkwZjQ2ZHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCBnoaDi6ls7s2McGSdUVxPXa6g8lFu3OjWbsBoPTnWK/aJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggLF8a+FalQufjamfb7ksMZqL8X7lYI2iMJycnb+b4gyuiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggyJTlpgCmrsdz1R+rnhQUgT55ScicDgsgFzPVey0WQzR0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQDvPiYKin1zjy0onI1FiIK6fqq91gvl+2bvX/MM+I3zEtcTEv5vuvZclm+PZah8UGOyYjM48VFJ8sdLdR53JTSs=</c2pa:manifest></metadata>
+<rect width="400" height="300" rx="28" fill="#FCE9C8"/>
+<circle cx="320" cy="70" r="34" fill="#F2C46D"/>
+<path d="M0 230 Q 100 190 200 225 T 400 215 V300 H0 Z" fill="#B9D8B0"/>
+
+<circle cx="170" cy="120" r="34" fill="#C98A5B"/>
+<path d="M136 112 Q 170 70 204 112 Q 190 92 170 94 Q 150 92 136 112 Z" fill="#2B2018"/>
+<circle cx="158" cy="122" r="3.5" fill="#2B2018"/><circle cx="182" cy="122" r="3.5" fill="#2B2018"/>
+<path d="M158 136 Q 170 146 182 136" stroke="#2B2018" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M126 238 Q 130 170 170 160 Q 210 170 214 238 Z" fill="#E8A23A"/>
+<path d="M210 182 L250 150" stroke="#C98A5B" stroke-width="12" stroke-linecap="round"/>
+
+<path d="M250 150 Q 262 110 270 92" stroke="#1E3A2B" stroke-width="2" fill="none"/>
+<ellipse cx="276" cy="70" rx="24" ry="28" fill="#2F6B4A"/>
+
+<path d="M40 230 C 30 190, 50 160, 80 150 C 75 185, 65 210, 40 230 Z" fill="#2F6B4A"/>
+<path d="M360 235 C 375 200, 360 170, 335 160 C 335 195, 342 218, 360 235 Z" fill="#4E8F67"/>
+</svg><div class="txt"><h3>Little ones</h3><p>Frequent colds, coughs, teething troubles, tummy upsets, poor appetite and restless sleep. Tiny sweet pills — no spoon battles.</p></div></article>
+   <article class="card"><svg xmlns="http://www.w3.org/2000/svg" class="pic" role="img" aria-label="An elderly couple sitting together on a garden bench" viewBox="0 0 400 300" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTowNDgxNzRlZC1lNDIxLTRiMzUtYTNjNC0xOGNhN2RkYTFiMDQAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaCc2i180xGD+nz1Gj+x/3cYAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDozNjRkNzk3ZC1kYjExLTRkY2ItOTkyNi03NDZjNmQzNGJkNGNscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNo0/FODs5Ctygp+avAocYmkQAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggq/psRB/U/c7RHTaBk7nxMpAHP9rT8XiJWQAjP0i+lpmkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaLlD60i2njiJH252X+2yKkQAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCBjF+jBrAxAtK8r9SFghcv1i/xHVb8yK7w311gCls6PMWRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBiWZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjA0ODE3NGVkLWU0MjEtNGIzNS1hM2M0LTE4Y2E3ZGRhMWIwNC9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjBlMjBjYmY4LTJlMWYtNDJlOS04ZTJkLWUwNjczNTg0MWQyOHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCCr+mxEH9T9ztEdNoGTufEykAc/2tPxeIlZACM/SL6WmaJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggx2U9MdQGekPPuIdDKX/LRDg2dulxARrVMSt4qEJkdAyiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggHEf4O6FBwgGPYMJM57WlW8eloMNC+AiHuVrnalkceH10Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQCVZRorM4Gppry4hiqo44n+n44cKJEBkH/deS8ll7pkPvwveW7M7LL97A96UxrRZWnttbqNxt7FuxPckScEvNSc=</c2pa:manifest></metadata>
+<rect width="400" height="300" rx="28" fill="#DCEBD9"/>
+<path d="M0 240 H400 V300 H0 Z" fill="#B9D8B0"/>
+
+<rect x="70" y="200" width="260" height="14" rx="6" fill="#8A5A3B"/>
+<rect x="90" y="214" width="10" height="34" fill="#8A5A3B"/><rect x="300" y="214" width="10" height="34" fill="#8A5A3B"/>
+
+<circle cx="155" cy="110" r="28" fill="#D3A27A"/>
+<path d="M130 104 Q 155 80 180 104" stroke="#F4F4F0" stroke-width="10" fill="none" stroke-linecap="round"/>
+<rect x="138" y="114" width="34" height="8" rx="4" fill="none" stroke="#1E3A2B" stroke-width="2.5"/>
+<path d="M146 128 Q 155 134 164 128" stroke="#5A3A28" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<path d="M118 205 Q 120 150 155 142 Q 190 150 192 205 Z" fill="#2F6B4A"/>
+
+<circle cx="245" cy="112" r="27" fill="#C98A5B"/>
+<circle cx="245" cy="86" r="14" fill="#E9E6DE"/>
+<path d="M219 108 Q 245 84 271 108" stroke="#E9E6DE" stroke-width="9" fill="none" stroke-linecap="round"/>
+<path d="M236 128 Q 245 134 254 128" stroke="#5A3A28" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<path d="M210 205 Q 212 150 245 143 Q 278 150 280 205 Z" fill="#E8A23A"/>
+
+<path d="M188 175 Q 200 185 214 175" stroke="#C98A5B" stroke-width="9" fill="none" stroke-linecap="round"/>
+
+<circle cx="350" cy="90" r="40" fill="#4E8F67"/><rect x="345" y="120" width="10" height="120" fill="#6B4A33"/>
+<circle cx="45" cy="70" r="20" fill="#F2C46D"/>
+</svg><div class="txt"><h3>Golden years</h3><p>Joint aches and stiffness, poor sleep, digestion and long-standing complaints. Gentle remedies alongside the medicines your doctor prescribed.</p></div></article>
+   <article class="card"><svg xmlns="http://www.w3.org/2000/svg" class="pic" role="img" aria-label="A person meditating calmly above a lotus flower" viewBox="0 0 400 300" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpmNGQ1Yzg4MC1iOTNhLTRiNDUtOWY1My0wNjNlNjc3MmU1YWUAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaGQjYpdIpybG/vImr85PWdgAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDpjYzBmNmVlNy03NTliLTQ3ZTUtYjZlNi1jZmQwZjk3ZDNkZWFscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNovZlBWkBfd2ciolloSRgmAgAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggGjQwVyfEgKqivmYc97KtzWO3xA1btTh50mQzFYRCGOCkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaNCUvoWYD2m+btg1GCFSkI8AAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCCDXOi13wul/rpB35dh9eUQmYxaFOmJA4YefybVi/ImL2RuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBiWZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmY0ZDVjODgwLWI5M2EtNGI0NS05ZjUzLTA2M2U2NzcyZTVhZS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjdhNGRjMzY5LWU1MDctNDIxYy04ODExLTAzMWFlNDMyZGMxM3JjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCAaNDBXJ8SAqqK+Zhz3sq3NY7fEDVu1OHnSZDMVhEIY4KJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggOuhEvIrFBLBEKDIkFXS6B/fo+I8iHrwfw7BpBd14q0CiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggBvnUpIEBHkskO75FlHcpi/r7xS/5VnWB02PAIibgnLt0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQFAYwm11TE+cbnCKI26MBfxk0Rn1cc6TWNozdg/Hfs5lnmArf4Otr5wCW3yEcUP5EgkMJm1qv0kvQ+f7Uiy9OF4=</c2pa:manifest></metadata>
+<rect width="400" height="300" rx="28" fill="#1E3A2B"/>
+<circle cx="200" cy="140" r="110" fill="#2F6B4A"/>
+<circle cx="200" cy="140" r="78" fill="#3F7F5A"/>
+
+<circle cx="200" cy="96" r="22" fill="#F2C46D"/>
+<path d="M170 170 Q 172 128 200 122 Q 228 128 230 170 Z" fill="#F7E3BC"/>
+<path d="M140 190 Q 200 160 260 190 Q 200 205 140 190 Z" fill="#F7E3BC"/>
+<path d="M172 150 Q 150 170 168 186" stroke="#F7E3BC" stroke-width="10" fill="none" stroke-linecap="round"/>
+<path d="M228 150 Q 250 170 232 186" stroke="#F7E3BC" stroke-width="10" fill="none" stroke-linecap="round"/>
+
+<path d="M200 260 C 185 240, 185 225, 200 212 C 215 225, 215 240, 200 260 Z" fill="#E8A23A"/>
+<path d="M200 260 C 175 255, 165 238, 170 225 C 185 232, 195 245, 200 260 Z" fill="#F2C46D"/>
+<path d="M200 260 C 225 255, 235 238, 230 225 C 215 232, 205 245, 200 260 Z" fill="#F2C46D"/>
+<g fill="#F7E3BC"><circle cx="70" cy="60" r="2.5"/><circle cx="330" cy="50" r="3"/><circle cx="350" cy="210" r="2"/><circle cx="60" cy="220" r="2.5"/><circle cx="110" cy="35" r="1.8"/></g>
+</svg><div class="txt"><h3>Peace of mind</h3><p>Stress, worry, exam fear, grief and sleepless nights. We take time to understand what you’re carrying.</p></div></article>
+  </div>
+ </div></section>
+
+ <section class="sec"><div class="wrap"><div class="support">
+  <h2>We also offer support for</h2>
+  <p class="hint">Swipe →</p>
+  <div class="swipe">
+   <div class="sitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 14c2-6 6-9 8-9s6 3 8 9"/><path d="M8 18h8"/><path d="M12 14v8"/></svg><span><b>Allergies &amp; colds</b>Sneezing, seasonal allergies, recurring coughs</span></div>
+   <div class="sitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="9" cy="10" r="1"/><circle cx="14" cy="14" r="1"/><circle cx="15" cy="9" r="1"/></svg><span><b>Skin concerns</b>Eczema, acne, warts, itching</span></div>
+   <div class="sitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 4c-2 4 0 6 3 7s5 4 3 9"/><path d="M14 4c3 2 4 6 2 9"/></svg><span><b>Digestion</b>Acidity, gas, constipation, poor appetite</span></div>
+   <div class="sitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M12 14v7"/><path d="M9 18h6"/></svg><span><b>Women’s health</b>Period troubles, PCOD, menopause</span></div>
+   <div class="sitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M20 14A8 8 0 1 1 10 4a6 6 0 0 0 10 10z"/></svg><span><b>Sleep &amp; stress</b>Restless nights, anxiety, low mood</span></div>
+   <div class="sitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg><span><b>Long-standing complaints</b>Joint pain, migraines, recurring problems</span></div>
+  </div>
+ </div></div></section>
+
+ <section class="visit" id="visit"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Your visit</span><h2>Four simple steps to feeling better</h2></div>
+  <p class="hint">Swipe through the steps →</p>
+  <div class="swipe g4">
+   <div class="step"><span class="n">01</span><b>Say hello</b><span>Message us on WhatsApp to book a clinic visit or an online consultation.</span></div>
+   <div class="step"><span class="n">02</span><b>We listen</b><span>An unhurried conversation about your health, habits, sleep and feelings.</span></div>
+   <div class="step"><span class="n">03</span><b>Your remedy</b><span>A remedy chosen for you as a whole person, with clear, simple instructions.</span></div>
+   <div class="step"><span class="n">04</span><b>Gentle follow-up</b><span>Regular check-ins to see how you are doing and fine-tune your care.</span></div>
+  </div>
+ </div></section>
+
+ <section class="sec" id="online"><div class="wrap"><div class="online">
+  <div style="display:flex;flex-direction:column;gap:14px">
+   <span class="tag"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3"/></svg>Online consultation</span>
+   <h2>Can’t come to the clinic? <span>Consult from home.</span></h2>
+   <p style="color:var(--muted)">Dr. Nidhi Soni also sees patients online — the same careful, unhurried consultation, from wherever you are. Ideal for busy parents, elders who find travel tiring, and families in another city.</p>
+   <a class="btn btn-green" data-topic="online" target="_blank" rel="noopener" href="#contact" style="align-self:flex-start"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.7-5A8.5 8.5 0 1 1 8 19.5L3 21z"/></svg>Book an online consultation</a>
+  </div>
+  <div class="olist">
+   <div class="oitem"><span class="n">1</span><span><b>Message us on WhatsApp</b>Tell us the problem and choose a time.</span></div>
+   <div class="oitem"><span class="n">2</span><span><b>Talk to the doctor</b>A detailed video or phone consultation, just like in the clinic.</span></div>
+   <div class="oitem"><span class="n">3</span><span><b>Get your remedy</b>We’ll explain on WhatsApp how your medicines will reach you, then follow up online.</span></div>
+  </div>
+ </div></div></section>
+
+ <section class="sec" id="doctor"><div class="wrap doc">
+  <div class="photo"><svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>[PHOTO OF DR. NIDHI SONI]</div>
+  <div style="display:flex;flex-direction:column;gap:14px">
+   <span class="eyebrow">Meet your doctor</span>
+   <h2>Dr. Nidhi Soni</h2>
+   <p class="quals">BHMS · MD (Homoeopathy) · University rank holder</p>
+   <p>Dr. Nidhi Soni completed both her Bachelor’s and her MD in Homoeopathy, and was a rank holder throughout her studies. She is known for her patience with problems that have lasted for years — the ones people have almost given up on.</p>
+   <p>Above all, she listens. Every visit begins with understanding you — your health, your routine and how you really feel — so the remedy fits you, not just the complaint.</p>
+   <div class="chips"><span class="c1">MD in Homoeopathy</span><span class="c2">Rank holder</span><span class="c1">Long-standing problems</span><span class="c2">A patient listener</span></div>
+  </div>
+ </div></section>
+
+ <section class="sec" id="faq"><div class="wrap" style="max-width:880px">
+  <div class="sec-head" style="margin-inline:auto;text-align:center;align-items:center"><span class="eyebrow">Questions</span><h2>Questions families ask</h2></div>
+  <details open><summary>Is homeopathy safe for children and babies?<span class="pm" aria-hidden="true">+</span></summary><p>Homeopathic remedies are given as small sweet pills or drops in very small doses, which is why many parents choose them for children. The doctor always asks about your child’s full history before prescribing.</p></details>
+  <details><summary>Can I continue my regular medicines?<span class="pm" aria-hidden="true">+</span></summary><p>Yes. Homeopathic remedies can usually be taken alongside other medicines. Tell us everything you are taking, and don’t stop any medicine your doctor prescribed without speaking to them first.</p></details>
+  <details><summary>How long will treatment take?<span class="pm" aria-hidden="true">+</span></summary><p>It depends on the person and the complaint. Recent problems often need a short course; long-standing ones need more time and regular follow-ups. The doctor will explain what to expect at your first visit.</p></details>
+  <details><summary>Do you offer online consultation?<span class="pm" aria-hidden="true">+</span></summary><p>Yes. Dr. Nidhi Soni consults online by video or phone, so you can be seen from home or from another city. Message us on WhatsApp to book a time, and we’ll explain how your medicines will reach you.</p></details>
+  <details><summary>How do I book an appointment?<span class="pm" aria-hidden="true">+</span></summary><p>Send us a message on WhatsApp at +91 96647 09002 and we’ll reply with available times, for a clinic visit or an online consultation.</p></details>
+ </div></section>
+
+ <section class="sec" id="contact"><div class="wrap"><div class="contact">
+  <div style="display:flex;flex-direction:column;gap:16px">
+   <span class="eyebrow">Contact us</span>
+   <h2>Tell us who the visit is for</h2>
+   <p class="sub">Pick one, then tap the button — WhatsApp opens with a ready-made message.</p>
+   <div class="topics" role="group" aria-label="Who is the visit for">
+    <button type="button" data-t="child" aria-pressed="true">My child</button><button type="button" data-t="elder" aria-pressed="false">An elderly parent</button><button type="button" data-t="mind" aria-pressed="false">Stress &amp; sleep</button><button type="button" data-t="skin" aria-pressed="false">Skin &amp; allergies</button><button type="button" data-t="me" aria-pressed="false">Myself</button><button type="button" data-t="online" aria-pressed="false">Online consultation</button>
+   </div>
+   <a class="btn btn-gold js-wa" href="#contact" target="_blank" rel="noopener" style="align-self:flex-start"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.7-5A8.5 8.5 0 1 1 8 19.5L3 21z"/></svg>Open WhatsApp</a>
+   <p class="preview">Message: “<span id="wa-preview"></span>”</p>
+  </div>
+  <div class="info">
+   <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 21l1.7-5A8.5 8.5 0 1 1 8 19.5L3 21z"/></svg><span><b>WhatsApp</b><a class="js-wa" href="#contact" target="_blank" rel="noopener" style="font-weight:800">+91 96647 09002</a></span></div>
+   <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><span><b>Clinic address</b>[CLINIC ADDRESS]</span></div>
+   <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><b>Clinic timings</b>[DAYS AND HOURS]</span></div>
+  </div>
+ </div></div></section>
+</main>
+
+<footer><div class="wrap">
+ <span><b>Healthcare Homeopathic Clinic</b> · Gentle care for every age · In clinic and online</span>
+ <span>Homeopathy works best as part of your overall care. Please don’t stop medicines prescribed by your doctor without advice, and in an emergency visit the nearest hospital.</span>
+</div></footer>
+
+<nav class="dock" aria-label="Quick contact">
+ <a class="w js-wa" href="#contact" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.7-5A8.5 8.5 0 1 1 8 19.5L3 21z"/></svg>Book on WhatsApp</a>
+ <a class="o" data-topic="online" href="#contact" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3"/></svg>Online</a>
+</nav>
+
+<script>
+(function(){
+ var PHONE='919664709002';
+ var MSG={
+  child:'Hello Healthcare Homeopathic Clinic, I would like to book a consultation for my child.',
+  elder:'Hello Healthcare Homeopathic Clinic, I would like to book a consultation for my elderly parent.',
+  mind:'Hello Healthcare Homeopathic Clinic, I would like a consultation for stress and sleep.',
+  skin:'Hello Healthcare Homeopathic Clinic, I would like a consultation for a skin or allergy problem.',
+  me:'Hello Healthcare Homeopathic Clinic, I would like to book a consultation for myself.',
+  online:'Hello Healthcare Homeopathic Clinic, I would like to book an online consultation with Dr. Nidhi Soni.'
+ };
+ function link(t){return 'https://wa.me/'+PHONE+'?text='+encodeURIComponent(MSG[t]||MSG.me);}
+ var current='child';
+ function setTopic(t){
+  current=t;
+  document.querySelectorAll('.js-wa').forEach(function(a){a.href=link(t);});
+  document.querySelectorAll('.topics button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.t===t?'true':'false');});
+  var p=document.getElementById('wa-preview'); if(p) p.textContent=MSG[t];
+ }
+ document.querySelectorAll('[data-topic]').forEach(function(a){a.href=link(a.dataset.topic);});
+ document.querySelectorAll('.topics button').forEach(function(b){b.addEventListener('click',function(){setTopic(b.dataset.t);});});
+ setTopic('child');
+ var burger=document.querySelector('.burger'),mnav=document.getElementById('mnav');
+ function menu(open){mnav.classList.toggle('open',open);burger.setAttribute('aria-expanded',open?'true':'false');burger.setAttribute('aria-label',open?'Close menu':'Open menu');burger.querySelector('.i-open').hidden=open;burger.querySelector('.i-close').hidden=!open;}
+ burger.addEventListener('click',function(){menu(!mnav.classList.contains('open'));});
+ mnav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu(false);});});
+ // hide dock while contact section is on screen
+ var dock=document.querySelector('.dock'),contact=document.getElementById('contact');
+ if('IntersectionObserver' in window && dock && contact){
+  new IntersectionObserver(function(e){dock.style.transform=e[0].isIntersecting?'translateY(140%)':'translateY(0)';},{threshold:.25}).observe(contact);
+ }
+})();
+</script>
+</body>
+</html>
